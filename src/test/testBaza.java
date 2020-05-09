@@ -28,10 +28,10 @@ public class testBaza {
 		System.out.println();
 
 		VideoService s = new VideoService(new VideoDao());
-		ArrayList<Video> t = s.getTop5();
-		
+		ArrayList<Video> t = s.getVideos(5);
+
 		for (Video o : t)
 			System.out.println(o);
 		System.out.println();
 	}
-	}
+}

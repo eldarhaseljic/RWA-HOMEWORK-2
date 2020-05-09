@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat May 09 15:25:44 CEST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0171-f99c-f0b6-000006611600 
+Sat May 09 22:11:58 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0171-fb10-da67-000006ab0600 
 on database directory /home/ubuntu/MyDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@55054057 
 Loaded from file:/mnt/sda1/baza/derby.jar
 java.vendor=Ubuntu

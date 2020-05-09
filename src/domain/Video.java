@@ -1,5 +1,7 @@
 package domain;
 
+import java.text.DecimalFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,15 +13,28 @@ public class Video {
 
 	@Column(name = "video_id")
 	private String videoId;
-	
+
 	@Id
 	@Column(name = "video_name")
 	private String videoName;
-	
+
 	@Column(name = "positive_votes")
 	private Integer positiveVotes;
 	@Column(name = "total_votes")
 	private Integer totalVotes;
+	@Column(name = "rank")
+	private Double rank;
+
+	public Double getRank() {
+		return Double.valueOf((new DecimalFormat("#.####")).format(rank));
+	}
+
+	public void setRank(Integer pos, Integer n) {
+		Double z = 1.96;
+		Double phat = 1.0 * pos / n;
+		this.rank = (phat + z * z / (2 * n) - z * Math.sqrt((phat * (1 - phat) + z * z / (4 * n)) / n))
+				/ (1 + z * z / n);
+	}
 
 	public String getVideoId() {
 		return videoId;
@@ -56,6 +71,6 @@ public class Video {
 	@Override
 	public String toString() {
 		return "video_id=" + videoId + ", video_name=" + videoName + ", positive_votes=" + positiveVotes
-				+ ", total_votes=" + totalVotes;
+				+ ", total_votes=" + totalVotes + ", rank=" + rank;
 	}
 }

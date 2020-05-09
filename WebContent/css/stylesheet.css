@@ -101,6 +101,7 @@ iframe{
     color:darkcyan;
 }
 
+
 .column {
     text-align: center;
     display: inline-block;
@@ -143,7 +144,7 @@ iframe{
 
 .column-text{
     font-family: 'Lucida Grande', Geneva;
-    font-size: 1.7vmax;
+    font-size: 1.5vmax;
     color: whitesmoke;
 }
 
