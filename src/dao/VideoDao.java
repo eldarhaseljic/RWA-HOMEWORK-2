@@ -17,7 +17,7 @@ final public class VideoDao extends AbstractDao {
 
 	public List<Video> findAll() {
 		EntityManager em = createEntityManager();
-		Query q = em.createQuery("SELECT v FROM Video v");
+		Query q = em.createQuery("SELECT v FROM Video v ORDER by v.rank DESC");
 		@SuppressWarnings("unchecked")
 		List<Video> resultList = q.getResultList();
 		em.close();

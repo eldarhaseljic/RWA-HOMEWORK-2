@@ -19,7 +19,7 @@ public class init {
 		Integer val = 10000;
 
 		for (Integer i = 0; i < 10; ++i) {
-			String title_id = faker.music().genre();
+			String title_id = faker.funnyName().name();
 			try {
 				FileReader readfile = new FileReader("yt_videos.txt");
 				BufferedReader readbuffer = new BufferedReader(readfile);
@@ -29,7 +29,7 @@ public class init {
 					s = readbuffer.readLine();
 					String[] parts = s.split(";");
 					video.setVideoId(parts[0]);
-					video.setVideoName((char) (i + 'A') + " (" + title_id + ") " + parts[1]);
+					video.setVideoName((char) (i + 'A') + title_id + " - " + parts[1]);
 					Integer randPos = rand.nextInt(val);
 					Integer randTotal = rand.nextInt(val);
 					while (randTotal < randPos)
